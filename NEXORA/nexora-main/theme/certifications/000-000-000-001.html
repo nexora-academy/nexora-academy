@@ -3,297 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Credential Verification | NEXORA Academy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Credential Verification | NEXORA ACADEMY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --nexora-yellow: #FFD700; /* الأصفر المضيء */
-            --nexora-white: #FFFFFF;
-            --dark-main: #050505;
-            --card-bg: #0f0f0f;
-            --border-color: #1e1e1e;
-            --text-gray: #a0a0a0;
+            --nexora-yellow: #FFB000; /* أصفر غامق احترافي */
+            --bg-black: #080808;
+            --card-gray: #121212;
+            --border-gray: #222222;
+            --text-dim: #999;
         }
 
         body {
-            margin: 0; padding: 0;
-            background-color: var(--dark-main);
-            color: var(--nexora-white);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
+            margin: 0; background-color: var(--bg-black); color: #fff;
+            font-family: 'Inter', sans-serif; line-height: 1.6;
         }
 
-        /* Navbar */
-        nav {
-            background: #000;
-            padding: 25px 10%;
-            border-bottom: 3px solid var(--nexora-yellow);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Top Navigation Bar */
+        .nav-bar {
+            border-bottom: 1px solid var(--border-gray);
+            padding: 20px 8%; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(8, 8, 8, 0.95); position: sticky; top: 0; z-index: 1000;
         }
 
-        .logo-text {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 800;
-            font-size: 26px;
-            letter-spacing: 2px;
-            color: var(--nexora-white);
+        .logo { font-family: 'Exo 2', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 1px; }
+        .logo span { color: var(--nexora-yellow); }
+
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+        /* Profile Header */
+        .profile-header {
+            background: linear-gradient(to right, #111, #080808);
+            border: 1px solid var(--border-gray); border-radius: 16px;
+            padding: 50px; display: flex; align-items: center; gap: 40px;
+            margin-bottom: 30px; position: relative; overflow: hidden;
         }
 
-        .logo-text span { color: var(--nexora-yellow); }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
+        .profile-header::after {
+            content: ""; position: absolute; top: -50%; right: -10%; width: 300px; height: 300px;
+            background: var(--nexora-yellow); filter: blur(150px); opacity: 0.05;
         }
 
-        /* Hero Banner */
-        .hero-banner {
-            background: linear-gradient(135deg, #111 0%, #000 100%);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 60px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .student-avatar {
+            width: 130px; height: 130px; background: #1a1a1a; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid var(--nexora-yellow); font-size: 60px; color: var(--nexora-yellow);
         }
 
-        .hero-content h1 {
-            font-family: 'Exo 2', sans-serif;
-            font-size: 42px;
-            margin: 0;
-            color: var(--nexora-yellow);
+        .header-text h1 { font-family: 'Exo 2', sans-serif; font-size: 36px; margin: 0; }
+        .badge-status { 
+            display: inline-flex; align-items: center; gap: 8px; 
+            background: rgba(255, 176, 0, 0.1); color: var(--nexora-yellow);
+            padding: 6px 16px; border-radius: 6px; font-size: 13px; font-weight: 700; margin-bottom: 15px;
         }
 
-        .verify-badge {
-            background: rgba(255, 215, 0, 0.1);
-            color: var(--nexora-yellow);
-            padding: 8px 20px;
-            border-radius: 50px;
-            border: 1px solid var(--nexora-yellow);
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: inline-block;
+        /* Info Grid */
+        .info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
+
+        .glass-card {
+            background: var(--card-gray); border: 1px solid var(--border-gray);
+            border-radius: 16px; padding: 30px; transition: 0.3s;
         }
 
-        /* Stats Grid */
-        .main-grid {
-            display: grid;
-            grid-template-columns: 2.5fr 1fr;
-            gap: 30px;
+        .glass-card:hover { border-color: #333; transform: translateY(-2px); }
+
+        h2 { font-family: 'Exo 2', sans-serif; font-size: 20px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        h2 i { color: var(--nexora-yellow); }
+
+        /* Course Path Timeline */
+        .timeline { border-left: 2px solid #222; margin-left: 10px; padding-left: 30px; }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item::before {
+            content: ""; position: absolute; left: -41px; top: 5px;
+            width: 20px; height: 20px; background: var(--bg-black);
+            border: 2px solid var(--nexora-yellow); border-radius: 50%;
         }
 
-        .section-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 35px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 30px;
+        .timeline-item h4 { margin: 0; font-size: 16px; color: #eee; }
+        .timeline-item p { margin: 5px 0 0; font-size: 14px; color: var(--text-dim); }
+
+        /* Skill Bar */
+        .skill-container { margin-bottom: 20px; }
+        .skill-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; color: #bbb; }
+        .progress-bar { background: #1a1a1a; height: 6px; border-radius: 10px; overflow: hidden; }
+        .progress-fill { background: var(--nexora-yellow); height: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 176, 0, 0.2); }
+
+        /* Sidebar Metadata */
+        .meta-list { list-style: none; padding: 0; margin: 0; }
+        .meta-list li { 
+            display: flex; justify-content: space-between; padding: 15px 0; 
+            border-bottom: 1px solid #1a1a1a; font-size: 14px;
+        }
+        .meta-list li span:last-child { font-weight: 700; color: #eee; }
+
+        .official-badge-img {
+            width: 100%; max-width: 200px; display: block; margin: 0 auto 20px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
         }
 
-        h2 {
-            font-family: 'Exo 2', sans-serif;
-            border-left: 4px solid var(--nexora-yellow);
-            padding-left: 15px;
-            margin-bottom: 25px;
-            font-size: 22px;
+        /* Verification Hash Footer */
+        .hash-box {
+            margin-top: 30px; padding: 15px; background: #000; border: 1px dashed #333;
+            border-radius: 8px; font-family: monospace; font-size: 11px; color: #555; word-break: break-all;
         }
 
-        /* Syllabus Table Style */
-        .module-item {
-            background: #181818;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s;
+        .btn-verify {
+            display: block; width: 100%; text-align: center; background: var(--nexora-yellow);
+            color: #000; padding: 16px; border-radius: 8px; font-weight: 800;
+            text-decoration: none; margin-top: 25px; transition: 0.3s;
         }
-
-        .module-item:hover { border-right: 3px solid var(--nexora-yellow); }
-
-        .module-info h4 { margin: 0; color: var(--nexora-white); }
-        .module-info p { margin: 5px 0 0; font-size: 13px; color: var(--text-gray); }
-
-        /* Progress Bars */
-        .skill-group { margin-bottom: 25px; }
-        .skill-label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
-        .progress-bg { background: #222; height: 10px; border-radius: 20px; overflow: hidden; }
-        .progress-fill { background: var(--nexora-yellow); height: 100%; box-shadow: 0 0 10px var(--nexora-yellow); }
-
-        /* Badge Sidebar */
-        .badge-display {
-            text-align: center;
-        }
-
-        .official-badge {
-            width: 220px;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.2));
-        }
-
-        .meta-info {
-            list-style: none; padding: 0;
-        }
-
-        .meta-info li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 14px;
-            display: flex; justify-content: space-between;
-        }
-
-        .meta-info li span { color: var(--nexora-yellow); font-weight: bold; }
-
-        /* Action Buttons */
-        .actions {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .btn-main {
-            background: var(--nexora-yellow);
-            color: #000;
-            padding: 18px 45px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 800;
-            text-transform: uppercase;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .btn-main:hover {
-            background: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
+        .btn-verify:hover { background: #fff; transform: scale(1.02); }
 
         @media (max-width: 900px) {
-            .main-grid { grid-template-columns: 1fr; }
-            .hero-banner { flex-direction: column; text-align: center; }
+            .info-grid { grid-template-columns: 1fr; }
+            .profile-header { flex-direction: column; text-align: center; padding: 30px; }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo-text">NEX<span>ORA</span> ACADEMY</div>
-    <div style="font-size: 12px; color: var(--text-gray);">SECURE CREDENTIAL SYSTEM v2.0</div>
+<nav class="nav-bar">
+    <div class="logo">NEX<span>ORA</span> ACADEMY</div>
+    <div style="font-size: 11px; color: var(--text-dim); letter-spacing: 1px;">OFFICIAL VERIFICATION PORTAL</div>
 </nav>
 
 <div class="container">
     
-    <div class="hero-banner">
-        <div class="hero-content">
-            <div class="verify-badge"><i class="fas fa-user-shield"></i> CERTIFIED GRADUATE</div>
+    <header class="profile-header">
+        <div class="student-avatar">
+            <i class="fas fa-user-check"></i>
+        </div>
+        <div class="header-text">
+            <div class="badge-status">
+                <i class="fas fa-shield-halved"></i> VERIFIED PROFESSIONAL
+            </div>
             <h1>Ahmed Mohamed Ali</h1>
-            <p style="color: var(--text-gray); font-size: 18px;">Programming for Security Professionals (Specialist)</p>
+            <p style="color: var(--text-dim); margin-top: 5px;">Specialization: Cybersecurity Programming & Automation</p>
         </div>
-        <div class="credential-qr-placeholder" style="text-align: center;">
-            <div style="background: #fff; padding: 10px; border-radius: 10px; display: inline-block;">
-                <i class="fas fa-qrcode" style="color: #000; font-size: 80px;"></i>
-            </div>
-            <p style="font-size: 10px; margin-top: 10px; color: var(--text-gray);">DIGITAL SIGNATURE VERIFIED</p>
-        </div>
-    </div>
+    </header>
 
-    <div class="main-grid">
-        <div class="content-area">
-            
-            <div class="section-card">
-                <h2><i class="fas fa-list-check"></i> Academic Transcript</h2>
-                <div class="module-item">
-                    <div class="module-info">
-                        <h4>Module 1: Programming Architectures</h4>
-                        <p>High/Low-level logic, Compilation vs Interpretation, Security scripting foundations.</p>
+    <div class="info-grid">
+        <div class="left-col">
+            <div class="glass-card" style="margin-bottom: 25px;">
+                <h2><i class="fas fa-terminal"></i> Learning Journey & Milestones</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Phase 1: Foundations of Secure Code</h4>
+                        <p>Logic building, memory safety, and understanding C++ compilation for security tools.</p>
                     </div>
-                    <span style="color: var(--nexora-yellow); font-weight: bold;">PASS</span>
-                </div>
-                <div class="module-item">
-                    <div class="module-info">
-                        <h4>Module 2: Systems Programming (C++)</h4>
-                        <p>Memory management, pointers logic, and building efficient security tools.</p>
+                    <div class="timeline-item">
+                        <h4>Phase 2: Offensive Python Scripting</h4>
+                        <p>Developing custom scanners, exploit automation, and interacting with APIs.</p>
                     </div>
-                    <span style="color: var(--nexora-yellow); font-weight: bold;">PASS</span>
-                </div>
-                <div class="module-item">
-                    <div class="module-info">
-                        <h4>Module 3: Advanced Automation (Python)</h4>
-                        <p>Task automation, modular libraries, and offensive security scripting.</p>
+                    <div class="timeline-item">
+                        <h4>Phase 3: Final Capstone Project</h4>
+                        <p>Successful deployment of a multi-threaded network reconnaissance tool.</p>
                     </div>
-                    <span style="color: var(--nexora-yellow); font-weight: bold;">PASS</span>
-                </div>
-                <div class="module-item">
-                    <div class="module-info">
-                        <h4>Module 4: Command Line Mastery</h4>
-                        <p>Bash & Windows CMD scripting for system interaction and penetration testing.</p>
-                    </div>
-                    <span style="color: var(--nexora-yellow); font-weight: bold;">PASS</span>
                 </div>
             </div>
 
-            <div class="section-card">
-                <h2><i class="fas fa-microchip"></i> Hands-on Lab Achievements</h2>
-                <div class="skill-group">
-                    <div class="skill-label"><span>Code Security Analysis</span><span>95%</span></div>
-                    <div class="progress-bg"><div class="progress-fill" style="width: 95%"></div></div>
+            <div class="glass-card">
+                <h2><i class="fas fa-bolt"></i> Technical Proficiency</h2>
+                <div class="skill-container">
+                    <div class="skill-label"><span>System Programming (C++)</span><span>94%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 94%"></div></div>
                 </div>
-                <div class="skill-group">
-                    <div class="skill-label"><span>Automation Script Development</span><span>91%</span></div>
-                    <div class="progress-bg"><div class="progress-fill" style="width: 91%"></div></div>
+                <div class="skill-container">
+                    <div class="skill-label"><span>Automation (Python/Bash)</span><span>91%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 91%"></div></div>
                 </div>
-                <div class="skill-group">
-                    <div class="skill-label"><span>Linux/Windows Environment Interaction</span><span>88%</span></div>
-                    <div class="progress-bg"><div class="progress-fill" style="width: 88%"></div></div>
+                <div class="skill-container">
+                    <div class="skill-label"><span>Security Logic & Auditing</span><span>88%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
                 </div>
             </div>
-
         </div>
 
-        <div class="sidebar">
-            
-            <div class="section-card badge-display">
-                <h2>Digital Badge</h2>
-                <img src="https://via.placeholder.com/220x220/000/FFD700?text=Programming+Badge" alt="Official Badge" class="official-badge">
-                <p style="font-size: 13px; color: var(--text-gray);">Issued by NEXORA Academy to individuals who demonstrate mastery in security-focused programming.</p>
+        <div class="right-col">
+            <div class="glass-card" style="text-align: center; margin-bottom: 25px;">
+                <h2>Official Badge</h2>
+                <img src="https://via.placeholder.com/200x200/080808/FFB000?text=Nexora+Badge" alt="Badge" class="official-badge-img">
+                <p style="font-size: 12px; color: var(--text-dim);">The "Programming Associate" badge represents advanced competence in security software development.</p>
             </div>
 
-            <div class="section-card">
-                <h2>Verification Info</h2>
-                <ul class="meta-info">
-                    <li>ID: <span>NEX-PRG-2026-001</span></li>
-                    <li>Grade: <span>Distinction</span></li>
-                    <li>Score: <span>91% / 100%</span></li>
-                    <li>Duration: <span>1.5 Months</span></li>
-                    <li>Status: <span style="color: #00ff00;">Active</span></li>
+            <div class="glass-card">
+                <h2>Details</h2>
+                <ul class="meta-list">
+                    <li><span>Credential ID</span><span>NEX-26-4401</span></li>
+                    <li><span>Issue Date</span><span>Jan 19, 2026</span></li>
+                    <li><span>Grade</span><span style="color: var(--nexora-yellow)">Distinction</span></li>
+                    <li><span>Credential Type</span><span>Professional</span></li>
                 </ul>
+                <div class="hash-box">
+                    SHA-256: 8f92c31e9c9621ad72f741006560f69a930706248a303abc4
+                </div>
+                <a href="#" class="btn-verify">
+                    <i class="fas fa-file-pdf"></i> VIEW PDF CERTIFICATE
+                </a>
             </div>
-
         </div>
     </div>
-
-    <div class="actions">
-        <a href="Ahmed-Ali-Certificate.pdf" class="btn-main">
-            <i class="fas fa-download"></i> Download Official Certificate (PDF)
-        </a>
-        <p style="margin-top: 30px; color: var(--text-gray); font-size: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
-            The NEXORA Verified Graduate program ensures that the holder of this credential has undergone rigorous training and passed all technical assessments under the supervision of academy instructors.
-        </p>
-    </div>
-
 </div>
 
-<footer style="text-align: center; padding: 40px; color: #444; font-size: 13px; border-top: 1px solid #111;">
-    &copy; 2026 NEXORA Academy. All Rights Reserved. | Secured & Verified System.
+<footer style="text-align: center; padding: 50px; color: #333; font-size: 12px;">
+    &copy; 2026 NEXORA ACADEMY SECURITY PORTAL. ALL RIGHTS RESERVED.
 </footer>
 
 </body>
