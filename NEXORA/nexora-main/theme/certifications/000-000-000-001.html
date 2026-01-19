@@ -3,210 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credential Verification | NEXORA Academy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Official Credential | NEXORA Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-red: #c0392b;
-            --dark-bg: #0a0a0a;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --text-gray: #b0b0b0;
-            --neon-green: #2ecc71;
+            --nexora-red: #cc0000;
+            --dark-main: #0a0a0a;
+            --card-bg: #141414;
+            --border-color: #222;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark-bg);
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            margin: 0; padding: 0;
+            background-color: var(--dark-main);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
         }
 
-        .verification-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            width: 90%;
-            max-width: 800px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header {
+        /* Navbar Style */
+        nav {
+            background: rgba(0,0,0,0.9);
+            padding: 20px 10%;
+            border-bottom: 2px solid var(--nexora-red);
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
         }
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
+        .logo-text {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 800;
             font-size: 24px;
-            letter-spacing: 5px;
-            color: white;
-            text-transform: uppercase;
-            margin: 0;
+            letter-spacing: 2px;
         }
 
-        .logo span { color: var(--primary-red); }
+        /* Main Wrapper */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
 
-        .content {
+        /* Hero Section */
+        .hero {
             display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
             align-items: center;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            position: relative;
         }
 
-        .badge-section {
-            flex: 1;
-            text-align: center;
-            min-width: 200px;
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 5px; height: 100%;
+            background: var(--nexora-red);
+            border-radius: 15px 0 0 15px;
         }
 
-        .badge-image {
-            width: 180px;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
-            transition: transform 0.3s ease;
+        .student-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid var(--nexora-red);
+            margin-right: 30px;
+            background: #222;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 50px;
         }
 
-        .badge-image:hover { transform: scale(1.05); }
+        .hero-info h1 { margin: 0; font-family: 'Exo 2', sans-serif; font-size: 32px; }
+        .status-tag { color: #00ff00; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
 
-        .info-section {
-            flex: 2;
-            min-width: 280px;
-        }
-
-        .status-badge {
-            background: rgba(46, 204, 113, 0.1);
-            color: var(--neon-green);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-            border: 1px solid var(--neon-green);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            margin: 0 0 10px 0;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .course-name {
-            color: var(--primary-red);
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .details-grid {
+        /* Stats Grid */
+        .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
         }
 
-        .detail-item label {
-            display: block;
-            font-size: 11px;
-            color: var(--text-gray);
-            text-transform: uppercase;
-            margin-bottom: 3px;
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
         }
 
-        .detail-item span {
-            font-weight: bold;
-            font-size: 14px;
-        }
+        h3 { color: var(--nexora-red); font-family: 'Exo 2', sans-serif; border-bottom: 1px solid #222; padding-bottom: 10px; }
 
-        .footer-action {
-            margin-top: 40px;
+        /* Syllabus List */
+        .syllabus-list { list-style: none; padding: 0; }
+        .syllabus-list li { margin-bottom: 12px; font-size: 14px; display: flex; align-items: center; }
+        .syllabus-list li i { color: var(--nexora-red); margin-right: 10px; font-size: 12px; }
+
+        /* Skills Progress */
+        .skill-bar { margin-bottom: 20px; }
+        .skill-bar span { display: block; font-size: 13px; margin-bottom: 5px; }
+        .bar-bg { background: #222; height: 8px; border-radius: 10px; overflow: hidden; }
+        .bar-fill { background: var(--nexora-red); height: 100%; }
+
+        /* Official Badge */
+        .badge-box { text-align: center; }
+        .badge-box img { width: 180px; margin-bottom: 20px; transition: 0.5s; }
+        .badge-box img:hover { transform: rotateY(20deg); }
+
+        /* Footer Action */
+        .footer {
+            margin-top: 50px;
             text-align: center;
+            padding: 40px;
+            border-top: 1px solid #222;
         }
 
-        .btn-download {
-            background: var(--primary-red);
+        .btn {
+            background: var(--nexora-red);
             color: white;
-            text-decoration: none;
-            padding: 12px 30px;
+            padding: 15px 40px;
             border-radius: 5px;
+            text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
-            display: inline-block;
         }
 
-        .btn-download:hover { background: #962d22; box-shadow: 0 0 20px rgba(192, 57, 43, 0.4); }
+        .btn:hover { background: #aa0000; box-shadow: 0 0 20px rgba(204, 0, 0, 0.4); }
 
-        /* ختم التوثيق المائي */
-        .watermark {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            opacity: 0.05;
-            font-size: 150px;
-            transform: rotate(-15deg);
-            pointer-events: none;
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero { flex-direction: column; text-align: center; }
+            .student-img { margin-right: 0; margin-bottom: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="verification-card">
-        <div class="watermark">NEXORA</div>
+<nav>
+    <div class="logo-text">NEX<span style="color:var(--nexora-red)">ORA</span> ACADEMY</div>
+</nav>
 
-        <div class="header">
-            <p class="logo">NEX<span>ORA</span> ACADEMY</p>
+<div class="container">
+    
+    <div class="hero">
+        <div class="student-img">
+            <i class="fas fa-user-shield"></i>
         </div>
-
-        <div class="content">
-            <div class="badge-section">
-                <img src="programming-badge.png" alt="Course Badge" class="badge-image">
-            </div>
-
-            <div class="info-section">
-                <div class="status-badge">✓ OFFICIALLY CERTIFIED</div>
-                <label style="color: var(--text-gray); font-size: 12px; display: block;">Certified Graduate:</label>
-                <h1>Ahmed Mohamed</h1>
-                <p class="course-name">Programming for Security Professionals</p>
-
-                <div class="details-grid">
-                    <div class="detail-item">
-                        <label>Credential ID</label>
-                        <span>NEX-PRO-2026-001</span>
-                    </div>
-                    <div class="detail-item">
-                        <label>Grade achieved</label>
-                        <span style="color: var(--neon-green);">Distinction (91%)</span>
-                    </div>
-                    <div class="detail-item">
-                        <label>Issue Date</label>
-                        <span>Jan 20, 2026</span>
-                    </div>
-                    <div class="detail-item">
-                        <label>Validity</label>
-                        <span>Lifetime Access</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-action">
-            <a href="certificate-pdf-link.pdf" class="btn-download">Download Certificate PDF</a>
-            <p style="font-size: 10px; color: var(--text-gray); margin-top: 15px;">
-                This digital credential is cryptographically tied to NEXORA Academy's official records.
-            </p>
+        <div class="hero-info">
+            <div class="status-tag"><i class="fas fa-check-circle"></i> Verified Credential</div>
+            <h1>Ahmed Mohamed Ali</h1>
+            <p style="color:#888">Credential ID: NEX-PRG-2026-0451</p>
         </div>
     </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3><i class="fas fa-book"></i> Course Syllabus & Competencies</h3>
+            <ul class="syllabus-list">
+                <li><i class="fas fa-code"></i> Advanced Programming Logic (C++/Python)</li>
+                <li><i class="fas fa-shield-alt"></i> Pentester Scripting & Task Automation</li>
+                <li><i class="fas fa-terminal"></i> Linux Bash & Windows CMD Environments</li>
+                <li><i class="fas fa-database"></i> Data Structures, Modules, and Libraries</li>
+                <li><i class="fas fa-bug"></i> Secure Coding Foundations for Cyber Security</li>
+            </ul>
+            
+            <h3 style="margin-top:40px;"><i class="fas fa-chart-line"></i> Performance Analysis</h3>
+            <div class="skill-bar">
+                <span>Programming Foundations (C++)</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 95%"></div></div>
+            </div>
+            <div class="skill-bar">
+                <span>Automation Scripting (Python)</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-bar">
+                <span>System Interaction (CLI)</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 92%"></div></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="card badge-box">
+                <h3>Official Badge</h3>
+                <img src="programming-badge.png" alt="Badge">
+                <p style="font-size:12px; color:#888">This student has earned the "Programming Associate" Digital Badge.</p>
+            </div>
+
+            <div class="card" style="margin-top:20px;">
+                <h3>Information</h3>
+                <p style="font-size:13px"><strong>Issue Date:</strong> Jan 2026</p>
+                <p style="font-size:13px"><strong>Expiry:</strong> No Expiration</p>
+                <p style="font-size:13px"><strong>Grade:</strong> <span style="color:var(--nexora-red)">Distinction (91%)</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="official-certificate.pdf" class="btn"><i class="fas fa-file-pdf"></i> Download PDF Certificate</a>
+        <p style="color:#555; font-size:12px; margin-top:30px;">
+            NEXORA Academy verifies that the individual named on this page has successfully completed all training requirements. 
+            Validation of this document can be performed via the official academy portal.
+        </p>
+    </div>
+</div>
 
 </body>
 </html>
