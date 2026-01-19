@@ -8,206 +8,165 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --nexora-yellow: #FFB000; /* أصفر غامق احترافي */
+            --nexora-yellow: #FFB000; 
             --bg-black: #080808;
-            --card-gray: #121212;
-            --border-gray: #222222;
-            --text-dim: #999;
+            --card-gray: #111111;
+            --border-gray: #222;
+            --text-dim: #aaa;
         }
 
-        body {
-            margin: 0; background-color: var(--bg-black); color: #fff;
-            font-family: 'Inter', sans-serif; line-height: 1.6;
-        }
+        body { margin: 0; background-color: var(--bg-black); color: #fff; font-family: 'Inter', sans-serif; line-height: 1.6; }
 
-        /* Top Navigation Bar */
-        .nav-bar {
-            border-bottom: 1px solid var(--border-gray);
-            padding: 20px 8%; display: flex; justify-content: space-between; align-items: center;
-            background: rgba(8, 8, 8, 0.95); position: sticky; top: 0; z-index: 1000;
-        }
-
+        .nav-bar { border-bottom: 1px solid var(--border-gray); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: #000; position: sticky; top: 0; z-index: 1000; }
         .logo { font-family: 'Exo 2', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 1px; }
         .logo span { color: var(--nexora-yellow); }
 
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
 
-        /* Profile Header */
+        /* Header Section */
         .profile-header {
-            background: linear-gradient(to right, #111, #080808);
-            border: 1px solid var(--border-gray); border-radius: 16px;
+            background: linear-gradient(145deg, #151515, #080808);
+            border: 1px solid var(--border-gray); border-radius: 20px;
             padding: 50px; display: flex; align-items: center; gap: 40px;
-            margin-bottom: 30px; position: relative; overflow: hidden;
-        }
-
-        .profile-header::after {
-            content: ""; position: absolute; top: -50%; right: -10%; width: 300px; height: 300px;
-            background: var(--nexora-yellow); filter: blur(150px); opacity: 0.05;
+            margin-bottom: 30px; border-left: 5px solid var(--nexora-yellow);
         }
 
         .student-avatar {
-            width: 130px; height: 130px; background: #1a1a1a; border-radius: 12px;
+            width: 120px; height: 120px; background: #1a1a1a; border-radius: 15px;
             display: flex; align-items: center; justify-content: center;
-            border: 2px solid var(--nexora-yellow); font-size: 60px; color: var(--nexora-yellow);
+            border: 1px solid #333; font-size: 50px; color: var(--nexora-yellow);
         }
 
-        .header-text h1 { font-family: 'Exo 2', sans-serif; font-size: 36px; margin: 0; }
-        .badge-status { 
-            display: inline-flex; align-items: center; gap: 8px; 
-            background: rgba(255, 176, 0, 0.1); color: var(--nexora-yellow);
-            padding: 6px 16px; border-radius: 6px; font-size: 13px; font-weight: 700; margin-bottom: 15px;
-        }
+        .header-text h1 { font-family: 'Exo 2', sans-serif; font-size: 32px; margin: 0; }
+        .verify-tag { color: #2ecc71; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block;}
 
-        /* Info Grid */
-        .info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
+        /* Main Grid */
+        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
+        .glass-card { background: var(--card-gray); border: 1px solid var(--border-gray); border-radius: 16px; padding: 35px; margin-bottom: 25px; }
 
-        .glass-card {
-            background: var(--card-gray); border: 1px solid var(--border-gray);
-            border-radius: 16px; padding: 30px; transition: 0.3s;
-        }
+        h2 { font-family: 'Exo 2', sans-serif; font-size: 20px; margin-bottom: 25px; color: var(--nexora-yellow); display: flex; align-items: center; gap: 12px; }
 
-        .glass-card:hover { border-color: #333; transform: translateY(-2px); }
+        /* Syllabus List */
+        .syllabus-item { margin-bottom: 20px; padding-left: 20px; border-left: 1px solid #333; }
+        .syllabus-item h4 { margin: 0; font-size: 16px; color: #fff; }
+        .syllabus-item p { margin: 5px 0 0; font-size: 13.5px; color: var(--text-dim); }
 
-        h2 { font-family: 'Exo 2', sans-serif; font-size: 20px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
-        h2 i { color: var(--nexora-yellow); }
+        /* Certificate Image Style */
+        .cert-preview { width: 100%; border-radius: 10px; border: 1px solid #333; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-        /* Course Path Timeline */
-        .timeline { border-left: 2px solid #222; margin-left: 10px; padding-left: 30px; }
-        .timeline-item { position: relative; margin-bottom: 30px; }
-        .timeline-item::before {
-            content: ""; position: absolute; left: -41px; top: 5px;
-            width: 20px; height: 20px; background: var(--bg-black);
-            border: 2px solid var(--nexora-yellow); border-radius: 50%;
-        }
+        /* Badge Box */
+        .badge-container { text-align: center; padding: 20px; background: #0a0a0a; border-radius: 12px; border: 1px solid #1a1a1a; margin-bottom: 20px; }
+        .badge-img { width: 180px; filter: drop-shadow(0 0 10px rgba(255,176,0,0.2)); transition: 0.3s; }
+        .badge-img:hover { transform: scale(1.05); }
 
-        .timeline-item h4 { margin: 0; font-size: 16px; color: #eee; }
-        .timeline-item p { margin: 5px 0 0; font-size: 14px; color: var(--text-dim); }
+        /* Details List */
+        .details-list { list-style: none; padding: 0; margin: 0; }
+        .details-list li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #1a1a1a; font-size: 14px; }
+        .details-list li span:first-child { color: var(--text-dim); }
 
-        /* Skill Bar */
-        .skill-container { margin-bottom: 20px; }
-        .skill-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; color: #bbb; }
-        .progress-bar { background: #1a1a1a; height: 6px; border-radius: 10px; overflow: hidden; }
-        .progress-fill { background: var(--nexora-yellow); height: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 176, 0, 0.2); }
-
-        /* Sidebar Metadata */
-        .meta-list { list-style: none; padding: 0; margin: 0; }
-        .meta-list li { 
-            display: flex; justify-content: space-between; padding: 15px 0; 
-            border-bottom: 1px solid #1a1a1a; font-size: 14px;
-        }
-        .meta-list li span:last-child { font-weight: 700; color: #eee; }
-
-        .official-badge-img {
-            width: 100%; max-width: 200px; display: block; margin: 0 auto 20px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-        }
-
-        /* Verification Hash Footer */
-        .hash-box {
-            margin-top: 30px; padding: 15px; background: #000; border: 1px dashed #333;
-            border-radius: 8px; font-family: monospace; font-size: 11px; color: #555; word-break: break-all;
-        }
-
-        .btn-verify {
+        .btn-action {
             display: block; width: 100%; text-align: center; background: var(--nexora-yellow);
             color: #000; padding: 16px; border-radius: 8px; font-weight: 800;
-            text-decoration: none; margin-top: 25px; transition: 0.3s;
+            text-decoration: none; margin-top: 15px; transition: 0.3s;
         }
-        .btn-verify:hover { background: #fff; transform: scale(1.02); }
+        .btn-action:hover { background: #fff; }
 
-        @media (max-width: 900px) {
-            .info-grid { grid-template-columns: 1fr; }
-            .profile-header { flex-direction: column; text-align: center; padding: 30px; }
-        }
+        .btn-outline { background: transparent; border: 1px solid var(--nexora-yellow); color: var(--nexora-yellow); }
+
+        @media (max-width: 900px) { .main-grid { grid-template-columns: 1fr; } .profile-header { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
 
 <nav class="nav-bar">
     <div class="logo">NEX<span>ORA</span> ACADEMY</div>
-    <div style="font-size: 11px; color: var(--text-dim); letter-spacing: 1px;">OFFICIAL VERIFICATION PORTAL</div>
+    <div style="font-size: 11px; color: var(--text-dim);">CREDENTIAL VERIFICATION SYSTEM</div>
 </nav>
 
 <div class="container">
     
     <header class="profile-header">
-        <div class="student-avatar">
-            <i class="fas fa-user-check"></i>
-        </div>
+        <div class="student-avatar"><i class="fas fa-user-shield"></i></div>
         <div class="header-text">
-            <div class="badge-status">
-                <i class="fas fa-shield-halved"></i> VERIFIED PROFESSIONAL
-            </div>
+            <span class="verify-tag"><i class="fas fa-check-circle"></i> Officially Certified</span>
             <h1>Ahmed Mohamed Ali</h1>
-            <p style="color: var(--text-dim); margin-top: 5px;">Specialization: Cybersecurity Programming & Automation</p>
+            <p style="color: var(--nexora-yellow); font-weight: 600; margin: 5px 0;">Programming Course – From Zero to Professional</p>
+            <p style="color: var(--text-dim); font-size: 14px; max-width: 700px;">
+                Focusing on cybersecurity scripting and automation for security professionals.
+            </p>
         </div>
     </header>
 
-    <div class="info-grid">
+    <div class="main-grid">
         <div class="left-col">
-            <div class="glass-card" style="margin-bottom: 25px;">
-                <h2><i class="fas fa-terminal"></i> Learning Journey & Milestones</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Phase 1: Foundations of Secure Code</h4>
-                        <p>Logic building, memory safety, and understanding C++ compilation for security tools.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Phase 2: Offensive Python Scripting</h4>
-                        <p>Developing custom scanners, exploit automation, and interacting with APIs.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>Phase 3: Final Capstone Project</h4>
-                        <p>Successful deployment of a multi-threaded network reconnaissance tool.</p>
-                    </div>
+            <div class="glass-card">
+                <h2><i class="fas fa-graduation-cap"></i> Course Syllabus & Mastery</h2>
+                
+                <div class="syllabus-item">
+                    <h4>Core Fundamentals</h4>
+                    <p>Software logic, difference between low-level/high-level languages, and programming vs scripting in cybersecurity.</p>
+                </div>
+
+                <div class="syllabus-item">
+                    <h4>Language Proficiency (C++ & Python)</h4>
+                    <p>Variables, data types, functions, lists, dictionaries, and modular secure coding.</p>
+                </div>
+
+                <div class="syllabus-item">
+                    <h4>Security Scripting</h4>
+                    <p>Developing custom scripts for Smart Systems and automated penetration testing tasks.</p>
+                </div>
+
+                <div class="syllabus-item">
+                    <h4>Command Line Mastery</h4>
+                    <p>Using Bash (Linux) and CMD (Windows) for system interaction and security automation.</p>
                 </div>
             </div>
 
             <div class="glass-card">
-                <h2><i class="fas fa-bolt"></i> Technical Proficiency</h2>
-                <div class="skill-container">
-                    <div class="skill-label"><span>System Programming (C++)</span><span>94%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 94%"></div></div>
-                </div>
-                <div class="skill-container">
-                    <div class="skill-label"><span>Automation (Python/Bash)</span><span>91%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 91%"></div></div>
-                </div>
-                <div class="skill-container">
-                    <div class="skill-label"><span>Security Logic & Auditing</span><span>88%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
-                </div>
+                <h2><i class="fas fa-certificate"></i> Digital Certificate Preview</h2>
+                <p style="font-size: 13px; color: var(--text-dim);">This is a low-resolution preview of the physical certificate issued by NEXORA Academy.</p>
+                <img src="certificate-image-placeholder.jpg" alt="NEXORA Certificate" class="cert-preview">
             </div>
         </div>
 
         <div class="right-col">
-            <div class="glass-card" style="text-align: center; margin-bottom: 25px;">
-                <h2>Official Badge</h2>
-                <img src="https://via.placeholder.com/200x200/080808/FFB000?text=Nexora+Badge" alt="Badge" class="official-badge-img">
-                <p style="font-size: 12px; color: var(--text-dim);">The "Programming Associate" badge represents advanced competence in security software development.</p>
+            <div class="glass-card">
+                <h2>Verified Badge</h2>
+                <div class="badge-container">
+                    <img src="programming-badge.png" alt="Nexora Programming Badge" class="badge-img">
+                </div>
+                <p style="font-size: 12px; color: var(--text-dim); text-align: center;">
+                    Earned for demonstrating proficiency in security-focused programming and automation.
+                </p>
             </div>
 
             <div class="glass-card">
-                <h2>Details</h2>
-                <ul class="meta-list">
-                    <li><span>Credential ID</span><span>NEX-26-4401</span></li>
+                <h2>Credential Details</h2>
+                <ul class="details-list">
+                    <li><span>Credential ID</span><span>NEX-PRG-2026-001</span></li>
                     <li><span>Issue Date</span><span>Jan 19, 2026</span></li>
-                    <li><span>Grade</span><span style="color: var(--nexora-yellow)">Distinction</span></li>
-                    <li><span>Credential Type</span><span>Professional</span></li>
+                    <li><span>Status</span><span style="color: #2ecc71;">Active / Verified</span></li>
+                    <li><span>Grade</span><span>Distinction (91%)</span></li>
                 </ul>
-                <div class="hash-box">
-                    SHA-256: 8f92c31e9c9621ad72f741006560f69a930706248a303abc4
-                </div>
-                <a href="#" class="btn-verify">
-                    <i class="fas fa-file-pdf"></i> VIEW PDF CERTIFICATE
+
+                <a href="student-certificate.pdf" class="btn-action">
+                    <i class="fas fa-file-pdf"></i> DOWNLOAD PDF
                 </a>
+                <a href="#" class="btn-action btn-outline">
+                    <i class="fab fa-linkedin"></i> SHARE ON LINKEDIN
+                </a>
+            </div>
+
+            <div style="text-align: center; color: #333; font-size: 11px; padding: 20px;">
+                <p>Digital Signature:<br>8f92c31e9c9621ad72f741006560f69a9</p>
             </div>
         </div>
     </div>
 </div>
 
-<footer style="text-align: center; padding: 50px; color: #333; font-size: 12px;">
-    &copy; 2026 NEXORA ACADEMY SECURITY PORTAL. ALL RIGHTS RESERVED.
+<footer style="text-align: center; padding: 40px; color: #444; font-size: 12px;">
+    &copy; 2026 NEXORA ACADEMY. SECURED BY NEXORA SYSTEMS.
 </footer>
 
 </body>
