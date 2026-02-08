@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>NEXORA - Smart Systems BLOG</title>
+    <title>NEXORA - WEB BLOG</title>
   <meta name="description" content="مدونة نكسورا التقنية: مصدرك الأول لأحدث أخبار التكنولوجيا، دروس الأمن السيبراني، ونصائح البرمجة من خبراء المجال.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/logo-middle.png">
+    <!-- all css here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -17,15 +19,24 @@
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--color css-->
     <link rel="stylesheet" id="triggerColor" href="assets/css/triggerplate/color-0.css">
+    <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
     <div id="preloader">
         <div class="loader"></div>
     </div>
+    <!-- prealoader area end -->
+    <!-- header area start -->
     <header id="header">
+        <!-- header top area start -->
         <div class="header-top">
             <div class="container">
                 <div class="row d-flex flex-center">
@@ -33,7 +44,7 @@
                         <div class="ht-address">
                             <ul>
                                 <li><i class="fa fa-phone"></i>+20 108 009 6438</li>
-                                <li><i class="fa fa-envelope"></i>info@nexora.com</li>
+                                <li><i class="fa fa-envelope"></i>info@nexora-academy.com</li>
                             </ul>
                         </div>
                     </div>
@@ -50,359 +61,347 @@
                 </div>
             </div>
         </div>
+        <!-- header top area end -->
         <div class="header-bottom">
-            <div class="container">
-                <div class="header-bottom-inner">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-sm-9">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/images/icon/NEXORA-logo.png" alt="logo" style="width: 185px; height: 60px;"></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-7 d-none d-lg-block">
-                            <div class="main-menu">
-                                <nav>
-                                    <ul id="m_menu_active">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="courses.html">Courses</a></li>
-                                        <li><a href="javascript:void(0);">Instructor</a>
-                                            <ul class="submenu">
-                                                <li><a href="teachers.html">Instructors</a></li>
-                                                <li><a href="teacher-details_security.html">Instructor details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="active"><a href="javascript:void(0);">Blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">General Blog</a></li>
-                                                <li><a href="blog-details_security.html">Security Blog</a></li>
-                                                <li class="active"><a href="blog-details_auto.html">Smart Systems Blog</a></li>
-                                                <li><a href="blog-details.html">Web Blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-1 col-lg-2 col-sm-3">
-                            <div class="hb-right">
-                                <ul> 
-                                    <li class="search_btn"><i class="fa fa-search"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 d-block d-lg-none">
-                            <div id="mobile_menu"></div>
-                        </div>
+    <div class="container">
+        <div class="header-bottom-inner">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-sm-9">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/icon/NEXORA-logo.png" alt="logo" style="width: 185px; height: 60px;"></a>
                     </div>
+                </div>
+                <div class="col-xl-8 col-lg-7 d-none d-lg-block">
+                    <div class="main-menu">
+                        <nav>
+                            <ul id="m_menu_active">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="active"><a href="courses.html">Courses</a></li>
+                                <li><a href="javascript:void(0);">Instructor</a>
+                                    <ul class="submenu">
+                                        <li><a href="teachers.html">Instructors</a></li>
+                                        <li><a href="teacher-details_security.html">Instructor details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="javascript:void(0);">Blog</a>
+                                    <ul class="submenu">
+                                        <li><a href="blog.html">General Blog</a></li>
+                                        <li class="active"><a href="blog-details_security.html">Security Blog</a></li>
+                                        <li class="active"><a href="blog-details_auto.html">Smart Systems Blog</a></li>
+                                        <li class="active"><a href="blog-details.html">Web Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+
+                                <li><a href="javascript:void(0);"><i class="fa fa-language"></i> Language</a>
+                                    <ul class="submenu">
+                                        <li><a href="javascript:void(0)" onclick="changeLanguage('ar')">العربية</a></li>
+                                        <li><a href="javascript:void(0)" onclick="changeLanguage('en')">English</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-lg-2 col-sm-3">
+                    <div class="hb-right">
+                        <ul> 
+                            <li class="search_btn"><i class="fa fa-search"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-lg-none">
+                    <div id="mobile_menu"></div>
                 </div>
             </div>
         </div>
-        </header>
+    </div>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+    // 1. إعداد محرك جوجل
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'ar,en,es',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    // 2. دالة تغيير اللغة مع الحفظ في localStorage
+    function changeLanguage(lang) {
+        localStorage.setItem('userLanguage', lang);
+        var selectField = document.querySelector(".goog-te-combo");
+        if (selectField) {
+            selectField.value = lang;
+            selectField.dispatchEvent(new Event('change'));
+        } else {
+            // لو المترجم لسه بيحمل ننتظر شوية
+            setTimeout(function() { changeLanguage(lang); }, 500);
+        }
+    }
+
+    // 3. التشغيل التلقائي عند تحميل الصفحة أو التنقل
+    window.addEventListener('load', function() {
+        var checkReplace = setInterval(function() {
+            var selectField = document.querySelector(".goog-te-combo");
+            var savedLang = localStorage.getItem('userLanguage');
+            
+            if (selectField) {
+                if (savedLang && savedLang !== 'en') {
+                    changeLanguage(savedLang);
+                }
+                clearInterval(checkReplace);
+            }
+        }, 300);
+    });
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+    /* تنظيف واجهة المستخدم من أشرطة جوجل المزعجة */
+    body { top: 0 !important; position: static !important; }
+    .skiptranslate iframe, .goog-te-banner-frame, #goog-gt-tt { display: none !important; }
+    .goog-te-gadget { color: transparent !important; font-size: 0px !important; }
+    html { padding-top: 0 !important; }
+    
+    /* ضمان ظهور الـ submenu الخاص باللغة بشكل صحيح */
+    .main-menu ul li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+    }
+</style>
+    <!-- header area end -->
+    <!-- offset search area start -->
     <div class="offset-search">
         <form action="#">
-            <input type="text" name="search" placeholder="Search automation topics...">
+            <input type="text" name="search" placeholder="Sarch here...">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
+    <!-- offset search area end -->
+    <!-- body overlay area start -->
     <div class="body_overlay"></div>
+    <!-- body overlay area end -->
+    <!-- crumbs area start -->
     <div class="crumbs-area">
         <div class="container">
             <div class="crumb-content">
-                <h4 class="crumb-title"><span>NEXORA</span> Smart Systems Blog</h4>
+                <h4 class="crumb-title"><span>NEXORA</span> WEB Services</h4>
             </div>
         </div>
     </div>
-    <div class="blog-details-area ptb--120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8">
-                    <div class="course-details">
+    <!-- crumbs area end -->
+  <!-- Web Development Details start -->
+<div class="blog-details-area ptb--120">
+    <div class="container">
+        <div class="row">
 
-                        <div class="cs-thumb mb-5">
-                            <img src="assets/images/blog/automation-1.png" alt="Business Process Automation">
-                        </div>
+            <!-- details start -->
+            <div class="col-lg-8 col-md-8">
+                <div class="course-details">
 
-                        <div class="cs-content">
-
-                            <div class="blog-top-meta">
-                                <ul>
-                                    <li><i class="fa fa-user"></i> By <span>Kareem Abdelmuttalib</span></li>
-                                    <li><i class="fa fa-tag"></i> RPA, AI Workflows, Digital Transformation</li>
-                                    <li><i class="fa fa-comment-o"></i>(5) <span>Comments</span></li>
-                                </ul>
-                            </div> 
-
-                            <h3 class="mb-4">Scaling Growth with Intelligent Business Smart Systems</h3>
-
-                            <p>
-                                In today's fast-paced digital economy, manual processes are a bottleneck to growth. This blog post explores how Robotic Process Automation (RPA) and AI-driven workflows can transform your daily operations from time-consuming chores into seamless, automated systems.
-                            </p>
-
-                            <p>
-                                We dive deep into the integration of smart tools that connect your favorite applications, eliminate human error, and allow your team to focus on high-value creative tasks rather than repetitive data entry. From CRM automation to automated lead generation, we cover the essentials of building a self-sustaining business architecture.
-                            </p>
-
-                            <div class="cs-post-share">
-                                <div class="row align-items-center">
-
-                                    <div class="col-lg-5 col-md-12 col-sm-8">
-                                        <div class="tags">
-                                            <h4><strong>Tags</strong></h4>
-                                            <ul class="list-inline">
-                                                <li><a href="#">Smart Systems</a></li>
-                                                <li><a href="#">RPA</a></li>
-                                                <li><a href="#">Efficiency</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-12 col-sm-4">
-                                        <div class="cs-share-right">
-                                            <ul class="list-inline">
-                                                <li><a href="https://www.linkedin.com/in/kareem-abdelmuttalib"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="https://github.com/kareem-abdelmuttalib"><i class="fa fa-github"></i></a></li>
-                                                <li><a href="https://www.instagram.com/kareem.abdel_muttalib?igsh=MTdobjliMHhweWRveQ=="><i class="fa fa-instagram"></i></a></li>
-                                                <li><a href="tel:+201080096438"><i class="fa fa-phone"></i></a></li>
-                                                <li><a href="https://kareem-abdelmuttalib.vercel.app"><i class="fa fa-user"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="post-author-info">
-                                <div class="thumb">
-                                    <img src="assets/images/author/kareem-2.png" alt="Instructor">
-                                </div>
-                                <div class="fix">
-                                    <h4>Kareem Abdelmuttalib</h4>
-                                    <p>
-                                        Automation Specialist and Solutions Architect focused on helping businesses implement AI-driven workflows, RPA solutions, and customized software integrations to maximize ROI.
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li><a href="https://www.linkedin.com/in/kareem-abdelmuttalib"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="https://github.com/kareem-abdelmuttalib"><i class="fa fa-github"></i></a></li>
-                                        <li><a href="https://www.instagram.com/kareem.abdel_muttalib?igsh=MTdobjliMHhweWRveQ=="><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="tel:+201080096438"><i class="fa fa-phone"></i></a></li>
-                                        <li><a href="https://kareem-abdelmuttalib.vercel.app"><i class="fa fa-user"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div class="cs-thumb mb-5">
+                        <img src="assets/images/blog/web-1.png" alt="Web Development">
                     </div>
 
-                    <div class="comment-area">
-                        <h4 class="comment-title">Comments <span>(03)</span></h4>
+                    <div class="cs-content">
+                        <div class="blog-top-meta">
+                            <ul>
+                                <li><i class="fa fa-user"></i> By <span>Kareem</span></li>
+                                <li><i class="fa fa-tag"></i> Web Development</li>
+                            </ul>
+                        </div> 
 
-                        <ul class="comment-list">
-                            <li class="comment-info-inner">
-                                <article>
-                                    <div class="comment-thumb">
-                                        <img src="assets/images/author/cs-comment-auth1.jpg" alt="image">
-                                    </div>
-                                    <div class="comment-content">
-                                        <h4>Ahmed</h4>
-                                        <p>The explanation on how to connect APIs for workflow automation was incredibly helpful for my startup.</p>
-                                        <div class="cs-cmnt-meta">
-                                            <ul>
-                                                <li>JANUARY 10, 2026</li>
-                                                <li><span>BY</span> Business Owner</li>
-                                            </ul>
-                                            <a href="404.html">REPLY <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
+                        <h3 class="mb-4">Web Development Services</h3>
 
-                            <li class="comment-info-inner">
-                                <article>
-                                    <div class="comment-thumb">
-                                        <img src="assets/images/author/cs-post-author1.jpg" alt="image">
+                        <p>
+                            We provide professional web development services focused on building fast, secure, and responsive websites.
+                            Our solutions are tailored for businesses, startups, and personal portfolios.
+                        </p>
+
+                        <p>
+                            The service covers front-end development using HTML, CSS, JavaScript, and modern frameworks,
+                            as well as back-end integration, performance optimization, and deployment best practices.
+                        </p>
+
+                        <div class="cs-post-share">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5 col-md-12">
+                                    <div class="tags">
+                                        <h4><strong>Technologies</strong></h4>
+                                        <ul class="list-inline">
+                                            <li><a href="#">HTML</a></li>
+                                            <li><a href="#">CSS</a></li>
+                                            <li><a href="#">JavaScript</a></li>
+                                            <li><a href="#">Bootstrap</a></li>
+                                        </ul>
                                     </div>
-                                    <div class="comment-content">
-                                        <h4>Sarah</h4>
-                                        <p>I didn't realize how much time we were wasting on manual data entry until I read this. Great insights!</p>
-                                        <div class="cs-cmnt-meta">
-                                            <ul>
-                                                <li>DECEMBER 15, 2025</li>
-                                                <li><span>BY</span> Project Manager</li>
-                                            </ul>
-                                            <a href="404.html">REPLY <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="cs-share-right">
+                                        <ul class="list-inline">
+                                            <li><a href="https://www.linkedin.com/in/kareem-abdelmuttalib"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="https://github.com/kareem-abdelmuttalib"><i class="fa fa-github"></i></a></li>
+                                            <li><a href="https://www.instagram.com/kareem.abdel_muttalib?igsh=MTdobjliMHhweWRveQ=="><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
                                     </div>
-                                </article>
-                            </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- author info -->
+                        <div class="post-author-info">
+                            <div class="thumb">
+                                <img src="assets/images/author/kareem-2.png" alt="Kareem">
+                            </div>
+                            <div class="fix">
+                                <h4>Kareem</h4>
+                                <p>
+                                    Web Developer specialized in building modern, scalable, and user-friendly web applications
+                                    with a strong focus on performance and clean code.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- details end -->
+
+            <!-- sidebar start -->
+            <div class="col-lg-4 col-md-4">
+                <div class="sidebar">
+
+                    <div class="widget widget-category">
+                        <h4 class="widget-title">Our Services</h4>
+                        <ul class="list">
+                            <li><a href="blog-details.html">Web Development</a></li>
+                            <li><a href="blog-details_auto.html">Smart Systems</a></li>
+                            <li><a href="blog-details_security.html">Cybersecurity</a></li>
                         </ul>
                     </div>
 
-                    <div class="leave-comment-area">
-                        <h4 class="comment-title">Leave Your Comment</h4>
-                        <form action="404.html">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" name="Name" placeholder="Enter your name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" name="email" placeholder="Your Email">
+                    <div class="widget widget-course">
+                        <h4 class="widget-title">Related Services</h4>
+                        <div class="course-list">
+                            <div class="w-cs-single">
+                                <img src="assets/images/course/automation-1.jpeg" alt="Automation">
+                                <div class="fix">
+                                    <p><a href="blog-details_auto.html">Smart Systems Solutions</a></p>
                                 </div>
                             </div>
-                            <textarea name="msg" placeholder="Your message here"></textarea>
-                            <button class="btn btn-primary btn-round" type="submit">
-                                Post Comment <i class="fa fa-long-arrow-right"></i>
-                            </button>
-                        </form>
+                            <div class="w-cs-single">
+                                <img src="assets/images/course/cybersecurity.jpeg" alt="Cybersecurity">
+                                <div class="fix">
+                                    <p><a href="blog-details_security.html">Cybersecurity Services</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="sidebar">
-                        <div class="widget widget-search">
-                            <h4 class="widget-title">Search</h4>
-                            <form>
-                                <input type="text" name="search" placeholder="Search Topics...">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                        <div class="widget widget-category">
-                            <h4 class="widget-title">Smart Systems Categories</h4>
-                            <ul class="list">
-                                <li><a href="#">Workflow Design</a></li>
-                                <li><a href="#">RPA Solutions</a></li>
-                                <li><a href="#">AI & Machine Learning</a></li>
-                                <li><a href="#">CRM Integration</a></li>
-                                <li><a href="#">API For Smart Systems</a></li>
-                            </ul>
-                        </div>
-                        <div class="widget widget-course">
-                            <h4 class="widget-title">Popular Posts</h4>
-                            <div class="course-list">
-                                <div class="w-cs-single">
-                                    <img src="assets/images/course/automation-1.jpeg" alt="image" style="width: 70px;">
-                                    <div class="fix">
-                                         <p><a href="#">Intro to Python Smart Systems</a></p>
-                                        <span><i class="fa fa-clock-o"></i> JAN 05, 2026</span>
-                                    </div>
-                                </div>
-                                <div class="w-cs-single">
-                                    <img src="assets/images/course/automation-1.jpeg" alt="image" style="width: 70px;">
-                                    <div class="fix">
-                                         <p><a href="#">No-Code Tool Comparison</a></p>
-                                        <span><i class="fa fa-clock-o"></i> NOV 12, 2025</span>
-                                    </div>
-                                </div>
-                                <div class="w-cs-single">
-                                    <img src="assets/images/course/automation-1.jpeg" alt="image" style="width: 70px;">
-                                    <div class="fix">
-                                         <p><a href="#">AI Chatbot Workflows</a></p>
-                                        <span><i class="fa fa-clock-o"></i> OCT 1, 2025</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="widget widget-subscribe">
-                            <h4 class="widget-title">Subscribe</h4>
-                            <div class="subscribe">
-                                <p>Get the latest automation tips in your inbox.</p>
-                                <form>
-                                    <input type="email" name="email" placeholder="Email address">
-                                    <button type="submit">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="widget widget-tag">
-                            <h4 class="widget-title">Tag Cloud</h4>
-                            <ul class="widget-tags">
-                                <li><a href="#">No-Code</a></li>
-                                <li><a href="#">Zapier</a></li>
-                                <li><a href="#">Make.com</a></li>
-                                <li><a href="#">NEXORA-AUTO</a></li>
-                                <li><a href="#">Python</a></li>
-                                <li><a href="#">Scalability</a></li>
-                                <li><a href="#">Chat-GPT</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                </div>
-                </div>
+            </div>
+            <!-- sidebar end -->
+
         </div>
     </div>
-    <footer>
-        <div class="footer-top has-color pt--120 pb--30">
-            <div class="container">
-                <div class="row">
+</div>
+<!-- Web Development Details end -->
 
-                    <div class="col-md-4">
-                        <div class="widget widget-company">
-                            <a href="index.html"><img src="assets/images/icon/NEXORA-logo.png" alt="NEXORA Logo" style="width: 185px; height: 60px;"></a>
-                            <div class="address">
-                                <h6>Office Address</h6>
-                                <p>Menoufia, Egypt</p>
-                            </div>
-                            <div class="address">
-                                <h6>Business Phone</h6>
-                                <p>+20 108 009 6438</p>
-                            </div>
-                            <div class="address">
-                                <h6>Business Email</h6>
-                                <p>info@nexora.com</p>
-                            </div>
-                            <ul class="social">
-                                <li><a href="https://www.facebook.com/nexora.online.resolve.academy/"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/nexora-online-resolve-academy/"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.instagram.com/kareem.abdel_muttalib?igsh=MTdobjliMHhweWRveQ=="><i class="fa fa-instagram"></i></a></li>
-                            </ul>
+
+
+<!-- footer area start -->
+<footer>
+    <div class="footer-top has-color pt--120 pb--30">
+        <div class="container">
+            <div class="row">
+
+                <!-- Company Info -->
+                <div class="col-md-4">
+                    <div class="widget widget-company">
+                        <a href="index.html"><img src="assets/images/icon/NEXORA-logo.png" alt="NEXORA Logo" style="width: 185px; height: 60px;"></a>
+                        <div class="address">
+                            <h6>Office Address</h6>
+                            <p>Menoufia, Egypt</p>
                         </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="widget footer-link">
-                            <h4 class="fwidget-title mb-5 pb-3 primary-color">Quick Links</h4> 
-                            <ul>
-                                <li><a href="index.html"><i class="fa fa-angle-right"></i>Home</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
-                                <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Instructors</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Smart Systems Services</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>
-                            </ul>
+                        <div class="address">
+                            <h6>Business Phone</h6>
+                            <p>+20 108 009 6438</p>
                         </div>
-                    </div>
-
-                    <div class="col-md-5">
-                        <div class="widget widget-opening">
-                            <h4 class="fwidget-title mb-5 pb-3 primary-color">Support Hours</h4>
-                            <p>Our automation experts are available to help you streamline your operations.</p>
-                            <ul>
-                                <li><span>Sun - Thu :</span> 9:00 AM - 6:00 PM</li>
-                                <li><span>Mon - Tue :</span> 8:00 AM - 8:00 PM</li>
-                                <li><span>Friday :</span> Closed</li>
-                            </ul>
+                        <div class="address">
+                            <h6>Business Email</h6>
+                            <p>info@nexora-academy.com</p>
                         </div>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/nexora.online.resolve.academy/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/nexora-online-resolve-academy/"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/kareem.abdel_muttalib?igsh=MTdobjliMHhweWRveQ=="><i class="fa fa-instagram"></i></a></li>
+                        </ul>
                     </div>
-
                 </div>
 
-                <div class="footer-bottom text-center mt-4">
-                    <p>
-                        Copyright © 2026 
-                        <span><a class="primary-color" href="index.html">NEXORA</a></span> 
-                        - Intelligent Smart Systems
-                    </p>
+                <!-- Footer Menu -->
+                <div class="col-md-3">
+                    <div class="widget footer-link">
+                        <h4 class="fwidget-title mb-5 pb-3 primary-color">Quick Links</h4> 
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-angle-right"></i>Home</a></li>
+                            <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
+                            <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Instructors</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Events</a></li>
+                            <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Working Hours -->
+                <div class="col-md-5">
+                    <div class="widget widget-opening">
+                        <h4 class="fwidget-title mb-5 pb-3 primary-color">Working Hours</h4>
+                        <p>Our support team is ready to help you with enrollment and course inquiries.</p>
+                        <ul>
+                            <li><span>Sat - Sun :</span> 9:00 AM - 1:00 PM</li>
+                            <li><span>Mon - Tue :</span> 8:00 AM - 6:00 PM</li>
+                            <li><span>Wed - Thu :</span> 8:00 AM - 6:00 PM</li>
+                            <li><span>Friday :</span> Closed</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom text-center mt-4">
+                <p>
+                    Copyright © 2026 
+                    <span><a class="primary-color" href="index.html">NEXORA</a></span> 
+                    - All Rights Reserved.
+                </p>
+            </div>
+
         </div>
-    </footer>
+    </div>
+</footer>
+<!-- footer area end -->
+
+
+
+    <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <!-- others plugins -->
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
