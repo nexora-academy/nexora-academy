@@ -50,126 +50,69 @@
     </div>
     <!-- prealoader area end -->
     
-    <!-- header area start -->
-    <header id="header">
-        <!-- header two area start -->
-        <div class="header-two">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-sm-6 d-block d-lg-none">
-                        <div class="logo">
-                            <a href="index.html"><img src="assets/images/icon/NEXORA-logo.png" alt="logo" style="width: 185px; height: 60px;"></a>
-                        </div>
+   <header id="header">
+    <div class="header-two">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-sm-6 d-block d-lg-none">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/icon/NEXORA-logo.png" alt="logo" style="width: 185px; height: 60px;"></a>
                     </div>
-                    <div class="col-lg-9 offset-lg-1 d-none d-lg-block">
-                        <div class="main-menu menu-style2">
-                            <nav>
-                                <ul id="m_menu_active">
-                                    <li class="active"><a href="index.html">Home</a>
-                                        <!-- <ul class="submenu">
-                                            <li class="active"><a href="index.html">Home One</a></li>
-                                            <li><a href="index2.html">Home Two</a></li>
-                                            <li><a href="index3.html">Home Three</a></li>
-                                        </ul> -->
-                                    </li>
-                                    
-                                    <li class="active"><a href="courses.html">Courses</a>
-                                    </li>
-                                    <li><a href="javascript:void(0);">Instructor</a>
-                                        <ul class="submenu">
-                                            <li><a href="teachers.html">Instructors</a></li>
-                                            <li><a href="teacher-details_security.html">Instructor details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="middle-logo">
-                                        <a href="index.html">
-                                            <img src="assets/images/icon/logo-middle.png" alt="logo">
-                                            <img class="hb-bottom-shape" src="assets/images/icon/hb-bottom-shape.png" alt="logo">
-                                        </a>
-                                    </li>
-                                    
-                                    <li><a href="javascript:void(0);">blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">General Blog</a></li>
-                                            <li class="active"><a href="blog-details_security.html">Security Blog</a></li>
-                                            <li class="active"><a href="blog-details_auto.html">Smart Systems Blog</a></li>
-                                            <li class="active"><a href="blog-details.html">Web Blog</a></li>
+                </div>
 
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-2 col-sm-5">
-                        <div class="header-bottom-right-style-2">
-                            <ul>
-                                <li><a data-toggle="modal" data-target="#exampleModal" class="btn btn-light btn-round" href="#">Log in</a></li>
-                                <li><a data-toggle="modal" data-target="#exampleModal2"  class="btn btn-primary btn-round" class="active" href="#">Sign Up</a></li>
+                <div class="col-lg-9 offset-lg-1 d-none d-lg-block">
+                    <div class="main-menu menu-style2">
+                        <nav>
+                            <ul id="m_menu_active">
+                                <li><a href="javascript:void(0);">Language</a>
+                                    <ul class="submenu">
+                                        <li><a href="javascript:void(0);" onclick="changeLang('en')">English</a></li>
+                                        <li><a href="javascript:void(0);" onclick="changeLang('ar')">العربية</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active"><a href="courses.html">Courses</a></li>
+                                
+                                <li><a href="javascript:void(0);">Instructor</a>
+                                    <ul class="submenu">
+                                        <li><a href="teachers.html">Instructors</a></li>
+                                        <li><a href="teacher-details_security.html">Instructor details</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="middle-logo">
+                                    <a href="index.html">
+                                        <img src="assets/images/icon/logo-middle.png" alt="logo">
+                                        <img class="hb-bottom-shape" src="assets/images/icon/hb-bottom-shape.png" alt="logo">
+                                    </a>
+                                </li>
+                                
+                                <li><a href="javascript:void(0);">blog</a>
+                                    <ul class="submenu">
+                                        <li><a href="blog.html">General Blog</a></li>
+                                        <li class="active"><a href="blog-details_security.html">Security Blog</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+
+                                <li class="d-none d-xl-block"><a href="offers.html" style="color: #ff5e00; font-weight: bold;">Offers</a></li>
                             </ul>
-                        </div>
-                         Button trigger modal -->  
-                        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content p-5">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Login Here</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <form> 
-                                    <input type="email" placeholder="Enter Your Email.." required="">
-                                    <input type="password" placeholder="Enter Your Paddword">
-                                    <label class="checkbox-inline mr-5"><input type="checkbox" value="">Remember Me</label> 
-                                    <a class="primary-color" href="#"><u>Forgot password</u></a>
-                                    <input class="btn btn-primary btn-sm" type="submit" value="Login">
-                                </form> 
-                              </div> 
-                            </div>
-                          </div> -->
-                        <!-- </div>  -->
-
-                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content p-5">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Please Sign Up Here</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body"> 
-                                <form class="signup-form text-center">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <input type="text" placeholder="First Name">
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" placeholder="Last Name">
-                                        </div>
-                                    </div>
-                                    <input type="email" placeholder="Enter Your Email.." required="">
-                                    <input type="password" placeholder="Enter Your Password">
-                                    <label class="checkbox-inline"><input type="checkbox" value="">I Agree</label> 
-                                    <input class="btn btn-primary btn-sm" type="submit" value="Register Now">
-                                </form> 
-                              </div> 
-                            </div>
-                          </div>
-                        </div>
-                    </div><!-- col-lg-2 -->
-                    <div class="col-12 d-block d-lg-none">
-                        <div id="mobile_menu"></div>
+                        </nav>
                     </div>
+                </div>
+
+                <div id="google_translate_element" style="display:none;"></div>
+
+                <div class="col-12 d-block d-lg-none">
+                    <div id="mobile_menu"></div>
                 </div>
             </div>
         </div>
-        <!-- header two area end -->
-    </header>
+    </div>
+</header>
     <!-- header area end -->
     <!-- offset search area start -->
     <div class="offset-search">
@@ -813,6 +756,44 @@
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ar,en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+function changeLang(langCode) {
+    // محاولة العثور على قائمة جوجل الخفية
+    var select = document.querySelector('.goog-te-combo');
+    if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change'));
+    } else {
+        // في حال لم تتحمل المكتبة بعد، نحاول مرة أخرى بعد نصف ثانية
+        setTimeout(function() {
+            var retrySelect = document.querySelector('.goog-te-combo');
+            if (retrySelect) {
+                retrySelect.value = langCode;
+                retrySelect.dispatchEvent(new Event('change'));
+            }
+        }, 500);
+    }
+}
+</script>
+
+<style>
+    /* تأكد من إضافة هذا التنسيق لإخفاء أدوات جوجل والاحتفاظ بتصميمك */
+    iframe.goog-te-banner-frame { display: none !important; }
+    body { top: 0px !important; }
+    .goog-te-gadget { display: none !important; }
+    .goog-te-combo { display: none !important; }
+</style>
 </body>
 
 </html>
