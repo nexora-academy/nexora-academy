@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>NEXORA - WEB BLOG</title>
-  <meta name="description" content="مدونة نكسورا التقنية: مصدرك الأول لأحدث أخبار التكنولوجيا، دروس الأمن السيبراني، ونصائح البرمجة من خبراء المجال.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/logo-middle.png">
@@ -44,7 +43,7 @@
                         <div class="ht-address">
                             <ul>
                                 <li><i class="fa fa-phone"></i>+20 108 009 6438</li>
-                                <li><i class="fa fa-envelope"></i>info@nexora-academy.com</li>
+                                <li><i class="fa fa-envelope"></i>info@nexora-acadmy.com</li>
                             </ul>
                         </div>
                     </div>
@@ -62,7 +61,8 @@
             </div>
         </div>
         <!-- header top area end -->
-        <div class="header-bottom">
+        <!-- header bottom area start -->
+       <div class="header-bottom">
     <div class="container">
         <div class="header-bottom-inner">
             <div class="row align-items-center">
@@ -88,7 +88,7 @@
                                     <ul class="submenu">
                                         <li><a href="blog.html">General Blog</a></li>
                                         <li class="active"><a href="blog-details_security.html">Security Blog</a></li>
-                                        <li class="active"><a href="blog-details_auto.html">Smart Systems Blog</a></li>
+                                        <li class="active"><a href="blog-details_auto.html">Automation Blog</a></li>
                                         <li class="active"><a href="blog-details.html">Web Blog</a></li>
                                     </ul>
                                 </li>
@@ -130,7 +130,7 @@
         }, 'google_translate_element');
     }
 
-    // 2. دالة تغيير اللغة مع الحفظ في localStorage
+    // 2. دالة تغيير اللغة مع الحفظ في localStorage لضمان استمرار الترجمة
     function changeLanguage(lang) {
         localStorage.setItem('userLanguage', lang);
         var selectField = document.querySelector(".goog-te-combo");
@@ -138,12 +138,12 @@
             selectField.value = lang;
             selectField.dispatchEvent(new Event('change'));
         } else {
-            // لو المترجم لسه بيحمل ننتظر شوية
+            // انتظار تحميل المحرك إذا لم يكن جاهزاً
             setTimeout(function() { changeLanguage(lang); }, 500);
         }
     }
 
-    // 3. التشغيل التلقائي عند تحميل الصفحة أو التنقل
+    // 3. كود الفحص التلقائي لضمان تطبيق اللغة المحفوظة عند التحميل
     window.addEventListener('load', function() {
         var checkReplace = setInterval(function() {
             var selectField = document.querySelector(".goog-te-combo");
@@ -162,17 +162,17 @@
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <style>
-    /* تنظيف واجهة المستخدم من أشرطة جوجل المزعجة */
+    /* تنظيف واجهة المستخدم وإخفاء أشرطة جوجل المزعجة */
     body { top: 0 !important; position: static !important; }
     .skiptranslate iframe, .goog-te-banner-frame, #goog-gt-tt { display: none !important; }
     .goog-te-gadget { color: transparent !important; font-size: 0px !important; }
     html { padding-top: 0 !important; }
     
-    /* ضمان ظهور الـ submenu الخاص باللغة بشكل صحيح */
+    /* لضمان تناسق القائمة المنسدلة في القالب الخاص بك */
     .main-menu ul li:hover > .submenu {
         opacity: 1;
         visibility: visible;
-        top: 100%;
+        display: block;
     }
 </style>
     <!-- header area end -->
@@ -281,7 +281,7 @@
                         <h4 class="widget-title">Our Services</h4>
                         <ul class="list">
                             <li><a href="blog-details.html">Web Development</a></li>
-                            <li><a href="blog-details_auto.html">Smart Systems</a></li>
+                            <li><a href="blog-details_auto.html">Automation</a></li>
                             <li><a href="blog-details_security.html">Cybersecurity</a></li>
                         </ul>
                     </div>
@@ -292,7 +292,7 @@
                             <div class="w-cs-single">
                                 <img src="assets/images/course/automation-1.jpeg" alt="Automation">
                                 <div class="fix">
-                                    <p><a href="blog-details_auto.html">Smart Systems Solutions</a></p>
+                                    <p><a href="blog-details_auto.html">Automation Solutions</a></p>
                                 </div>
                             </div>
                             <div class="w-cs-single">
@@ -335,7 +335,7 @@
                         </div>
                         <div class="address">
                             <h6>Business Email</h6>
-                            <p>info@nexora-academy.com</p>
+                            <p>info@nexora-acadmy.com</p>
                         </div>
                         <ul class="social">
                             <li><a href="https://www.facebook.com/nexora.online.resolve.academy/"><i class="fa fa-facebook"></i></a></li>
