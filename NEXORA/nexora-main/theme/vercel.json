@@ -1,3 +1,10 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/certifications/:id([0-9-]+)",
+      "destination": "/certifications/view?id=:id",
+      "permanent": true
+    }
+  ]
 }
